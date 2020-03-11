@@ -11,7 +11,15 @@
 onclick="js_style()">Style</button>
 </div>
   <script> 
-  document.getElementById("text").style.color = "blue";
+    var cli = true;
+    //change and changeback  text with terenary operator on click
+    //syntax condition ? exprIfTrue : exprIfFalse
+    function js_style(){
+        document.getElementById("text").style.color = cli ? "blue" : "";
+        document.getElementById("text").style.fontFamily =  cli ? "Impact,Charcoal,sans-serif" : "";
+        document.getElementById("text").style.fontSize = cli ? "2em" : ""; 
+        cli =! cli;
+    }
   </script>
 </body>
 </html>
